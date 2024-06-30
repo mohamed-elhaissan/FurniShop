@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+html {
+    --body : rgb(245,247,250);
+    --fontColor :#254d4d;
+    --textDark:#171717;
+}
+body {
+    background-color: var(--body);
+}
+header {
+    display: flex;
+    margin:20px 100px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+nav {
+    position: absolute;
+    right: 0;
+    top: 200%;
+}
+nav ul {
+    list-style: none;
+    
+    display: flex;
+    flex-direction:column ;
+    gap: 50px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--textDark);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu span {
+    width: 30px;
+    background-color: var(--textDark);
+    height: 3px;
+    border-radius: 50px;
+    margin: 2px 0;
+    transition: all .3s ease;
+}
+.retate {
+    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    width: 20px;
+}
+.ReverseRetate{
+    transform: rotate(45deg);
+    width: 20px;
+}
+.none {
+    display: none;
+}
