@@ -111,9 +111,9 @@ section:first-of-type div:first-of-type p {
 }
 .hotDeals {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
-.hotDeals h2 {
+.hotDeals h2,.about h2,.products h2 {
     font-size: 50px;
     color: var(--fontColor);
     font-family: 'inter',sans-serif;
@@ -141,6 +141,7 @@ section:first-of-type div:first-of-type p {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 .hotDeals > div div::before {
     content: '';
@@ -153,17 +154,73 @@ section:first-of-type div:first-of-type p {
     border-radius: 50%;
     transition: all .3s cubic-bezier(0.5, 0, 0, 1);
 }
-.hotDeals > div div:hover h3 {
-    color: #fff;
-}
-.hotDeals > div div:hover::before {
-    width: 200%;
-    height: 200%;
-}
+
+
 .hotDeals > div div p {
     padding: 0px 40px;
     margin-top: 30px;
 }
 .hotDeals div div h3 {
     font-size: 30px;
+}
+.about {
+    text-align: center;
+    margin-top: 100px;
+}
+.about > div {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+}
+.about img {
+    width: 900px;
+}
+.about div div {
+    display: flex;
+    flex-direction: column;
+    transition: all .3s cubic-bezier(0,.68,.49,1.29);
+}
+.about div div span {
+    padding: 20px;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all .3s cubic-bezier(0,.68,.49,1.29); 
+    margin: 10px;
+}
+.about div div span:hover , .products div div:hover {
+    filter: none;
+    transform: scale(1.1);
+    margin: 20px;
+}
+.about div div span h3 {
+    font-size: 30px;
+    color: var(--fontColor);
+    margin-bottom: 30px;
+}
+.products div div img {
+    width: 275px;
+    margin-top: 20px;
+}
+.products {
+    text-align: center;
+    margin-top: 100px;
+}
+.products div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.products div div {
+    width: calc(100%/4);
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: all .3s cubic-bezier(0,.68,.49,1.29);
+    cursor: pointer;
 }
